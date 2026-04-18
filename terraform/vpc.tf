@@ -1,8 +1,8 @@
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
   version = "~> 5.0"
-  name   = "vpcForEKS"
-  cidr   = "172.10.0.0/16"
+  name    = "vpcForEKS"
+  cidr    = "172.10.0.0/16"
 
   azs             = slice(data.aws_availability_zones.availableZone.names, 0, 3)
   private_subnets = ["172.10.1.0/24", "172.10.2.0/24", "172.10.3.0/24"]

@@ -37,7 +37,9 @@ jobs:
       - name: Initialize terraform/**
         id: init 
         run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
-      - name: format terraform code
+      - name: Format terraform code
+        run: terraform fmt
+      - name: Check format of terraform code
         id: format
         run: terraform fmt -check
       - name: Validate terraform files

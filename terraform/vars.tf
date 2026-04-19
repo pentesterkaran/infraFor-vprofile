@@ -7,7 +7,6 @@ variable "clusterName" {
   default = "boiCluster"
 }
 
-##
-##
+
 ##
 ##
